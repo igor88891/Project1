@@ -1,4 +1,4 @@
-from src.widget import mask_account_card,get_date
+from src.widget import mask_account_card, get_date
 
 
 if __name__ == '__main__':
