@@ -2,11 +2,11 @@ from src.widget import get_date
 import datetime
 
 
-def sort_by_date(dct, reverse=True):
+def sort_by_date(dct: list, reverse=True) -> list:
     return sorted(dct, key=lambda x: x['date'], reverse=reverse)
 
 
-def filter_by_state(dct, state='EXECUTED'):
+def filter_by_state(dct: list, state='EXECUTED') -> list:
     state_list = []
     for item in dct:
         if item['state'] == state:
