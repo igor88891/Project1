@@ -24,14 +24,15 @@ if __name__ == '__main__':
             {'id': 594226727, 'state': 'CANCELED', 'date': '2018-09-12T21:27:25.241689'},
             {'id': 615064591, 'state': 'CANCELED', 'date': '2018-10-14T08:21:33.419441'}]
     print(filter_by_state(data))
-    print( sort_by_date(data))
+    print(sort_by_date(data))
 
 if __name__ == 'main':
-    assert get_date('2019-07-03T18:35:29.512364') =='03.07.2019'
+    assert get_date('2019-07-03T18:35:29.512364') == '03.07.2019'
 
     assert mask_account_card("Maestro 1596837868705199") == "Maestro 1596 83** **** 5199"
     assert mask_account_card("Счет 64686473678894779589") == "Счет **9589"
     assert mask_account_card("") == "Введите корректные данные"
+
 
 
 
