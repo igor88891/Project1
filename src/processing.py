@@ -1,7 +1,3 @@
-from src.widget import get_date
-import datetime
-
-
 def sort_by_date(dct: list, reverse=True) -> list:
     return sorted(dct, key=lambda x: x['date'], reverse=reverse)
 
