@@ -6,7 +6,7 @@ def get_date():
     pass
 
 
-def  sort_by_date():
+def sort_by_date():
     pass
 
 
