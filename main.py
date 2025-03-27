@@ -1,6 +1,6 @@
 from src.widget import mask_account_card, get_date
 from src.processing import filter_by_state, sort_by_date
-from src.generators import card_number_generator
+
 
 if __name__ == '__main__':
     card_nums = [
@@ -13,7 +13,6 @@ if __name__ == '__main__':
         "Visa Gold 5999414228426353",
         "Счет 73654108430135874305"
     ]
-
     for card in card_nums:
         print(mask_account_card(card))
     print(get_date("2024-03-11T02:26:18.671407"))  # 11.03.2024
@@ -109,12 +108,7 @@ if __name__ == 'main':
     )
 
 
-if __name__ == 'main':
-    assert get_date('2019-07-03T18:35:29.512364') == '03.07.2019'
 
-    assert mask_account_card("Maestro 1596837868705199") == "Maestro 1596 83** **** 5199"
-    assert mask_account_card("Счет 64686473678894779589") == "Счет **9589"
-    assert mask_account_card("") == "Введите корректные данные"
 
 
 
