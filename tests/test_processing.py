@@ -12,6 +12,7 @@ def dct():
 def test_sort_by_date(dct):
     assert sort_by_date(dct)
 
+
 @pytest.fixture
 def state():
     return [{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'},
@@ -19,5 +20,9 @@ def state():
 
 def test_filter_by_state(state):
     assert filter_by_state(state)
+
+def test_filter_by_state_none_state(dct):
+    assert filter_by_state([]) == []
+
 
 
