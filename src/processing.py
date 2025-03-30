@@ -6,7 +6,7 @@ def sort_by_date(dct: list, reverse=True) -> list:
     for item in dct:
         if isoparse(item['date']):
             date_list_rerverse.append(item)
-            print (isoparse(item['date']))
+            print(isoparse(item['date']))
         else:
             return "Дата отсутствует, либо введена в некоректном формате!"
     return sorted(date_list_rerverse, key=lambda x: x['date'], reverse=reverse)
@@ -22,6 +22,8 @@ def filter_by_state(dct: list, state='EXECUTED') -> list:
         else:
             state_list_false.append(item)
     return state_list_true
+
+
 
 
 

@@ -2,7 +2,6 @@ import datetime
 
 from src.masks import get_mask_account, get_mask_card_number
 
-
 def mask_account_card(type_and_number: str) -> str:
     """функция, которая умеет обрабатывать информацию как о картах, так и о счетах."""
     if len(type_and_number) < 1:
@@ -17,7 +16,6 @@ def mask_account_card(type_and_number: str) -> str:
             " ".join(type_and_number.split()[:-1]) + " " + get_mask_card_number(number)
         )
         return updated_card
-
 
 def get_date(user_date: str) -> str:
     """Функция, которая принимает на вход строку с датой в формате "2024-03-11T02:26:18.671407" и
