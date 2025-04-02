@@ -1,5 +1,6 @@
 from dateutil.parser import isoparse
 
+
 def sort_by_date(dct: list, reverse=True) -> list:
     '''Функция сортирует список словарей по дате'''
     date_list_rerverse = []
@@ -22,18 +23,3 @@ def filter_by_state(dct: list, state='EXECUTED') -> list:
         else:
             state_list_false.append(item)
     return state_list_true
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
