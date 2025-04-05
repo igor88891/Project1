@@ -1,4 +1,5 @@
 from typing import Union
+
 """Получаем данные от пользователя"""
 
 
