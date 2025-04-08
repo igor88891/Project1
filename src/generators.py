@@ -15,6 +15,7 @@ def filter_by_currency(transactions: list[dict], currency: str) -> Iterator:
 
 
 def card_number_generator(start: int, stop: int) -> Iterator:
+    "функция генерирует номер карты"
     for number in range(start, stop + 1):
         number_card = f"{number:016d}"
         number_card_format = f"{number_card[:4]} {number_card[4:8]} {number_card[8:12]} {number_card[12:16]}"
