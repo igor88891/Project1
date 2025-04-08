@@ -1,5 +1,6 @@
 import pytest
-from src.decorators import  my_function, log
+from src.decorators import my_function, log
+
 
 # Тест функции с делением на ноль
 @log(filename="mylog.txt")
