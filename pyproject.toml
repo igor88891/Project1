@@ -8,7 +8,9 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "pytest-cov (>=6.0.0,<7.0.0)"
+    "pytest-cov (>=6.0.0,<7.0.0)",
+    "requests (>=2.32.3,<3.0.0)",
+    "python-dotenv (>=1.1.0,<2.0.0)"
 ]
 
 
@@ -25,6 +27,7 @@ isort = "^6.0.1"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.5"
+pytest-cov = "^6.0.0"
 
 [tool.flake8]
 max-line-length = 119
