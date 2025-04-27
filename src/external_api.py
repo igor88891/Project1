@@ -2,8 +2,10 @@ import os
 
 from dotenv import load_dotenv
 import requests
+
 load_dotenv()
-API_KEY = os.getenv('API_KEY')
+API_KEY = os.getenv("API_KEY")
+
 
 def get_amount_rub(transaction):
     "Функция принимает список транзакций и возвращает сумму конвертированную в рубли"
@@ -13,11 +15,12 @@ def get_amount_rub(transaction):
         return float(amount)
     else:
         response = requests.get(
-            f'https://api.apilayer.com/exchangerates_data/convert?from={currency}&to=RUB&amount={amount}',
-            headers = {'apikey': API_KEY}
+            f"https://api.apilayer.com/exchangerates_data/convert?from={currency}&to=RUB&amount={amount}",
+            headers={"apikey": API_KEY},
         )
         data = response.json()
         return float(data["result"])
+
 
 # print(get_amount_rub({
 #     "id": 41428829,
