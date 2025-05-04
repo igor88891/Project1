@@ -3,8 +3,8 @@ import logging
 
 masks_logger = logging.getLogger("masks_log")
 masks_logger.setLevel(logging.INFO)
-formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-file_handler = logging.FileHandler('../logs/utils.log', encoding='utf-8')
+formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+file_handler = logging.FileHandler("../logs/utils.log", encoding="utf-8")
 file_handler.setFormatter(formatter)
 masks_logger.addHandler(file_handler)
 
@@ -23,5 +23,6 @@ def get_transaction_json(operations_file):
             masks_logger.error("Информация отсутствует!")
             return []
     return operations_data
-masks_logger.info("Программа завершила работу!")
 
+
+masks_logger.info("Программа завершила работу!")
