@@ -4,13 +4,15 @@ import logging
 
 masks_logger = logging.getLogger("masks_log")
 masks_logger.setLevel(logging.INFO)
-formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-file_handler = logging.FileHandler('../logs/masks.log', encoding='utf-8')
+formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+file_handler = logging.FileHandler("../logs/masks.log", encoding="utf-8")
 file_handler.setFormatter(formatter)
 masks_logger.addHandler(file_handler)
 
 
 """Получаем данные от пользователя"""
+
+
 def get_mask_card_number(card_number: Union[str]) -> Union[str]:
     """Возвращаем замаскированый номер карты"""
     masks_logger.info(f"Получение номера карты: {card_number}")
